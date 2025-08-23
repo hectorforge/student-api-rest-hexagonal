@@ -1,0 +1,154 @@
+{
+	"info": {
+		"_postman_id": "f9aefdc7-6b6d-4ba4-b279-22d9f3e17444",
+		"name": "Crud-Alumnos",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "47106724",
+		"_collection_link": "https://hectorforge-7974077.postman.co/workspace/hectorforge's-Workspace~cd5e0ce1-8170-4a9b-8bd0-29a2d72521c1/collection/47106724-f9aefdc7-6b6d-4ba4-b279-22d9f3e17444?action=share&source=collection_link&creator=47106724"
+	},
+	"item": [
+		{
+			"name": "listarAlumnos",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "obtenerAlumno",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "crearAlumno",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/alumnos",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"alumnos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "actualizarAlumno",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/alumnos/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"alumnos",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "desactivarAlumno",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/alumnos/2/desactivar",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"alumnos",
+						"2",
+						"desactivar"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "activarAlumno",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/alumnos/1/activar",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"alumnos",
+						"1",
+						"activar"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "eliminarAlumno",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/alumnos/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"alumnos",
+						"1"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
