@@ -29,3 +29,103 @@ Este proyecto expone un conjunto de endpoints REST.
 
 Puedes importar la colección de Postman para probar los endpoints:  
 [Descargar colección aquí](postman/Crud-Alumnos.postman_collection.json)
+
+## 🏠 Estructura del proyecto 
+```plaintext
++---main
+|   +---java
+|   |   \---com
+|   |       \---hector
+|   |           \---forge
+|   |               \---msapirestalumnos
+|   |                   |   MsApirestAlumnosApplication.java
+|   |                   |
+|   |                   +---application
+|   |                   |   +---exception
+|   |                   |   |       DomainStudentDuplicatedEmailException.java
+|   |                   |   |       DomainStudentNotFoundException.java
+|   |                   |   |
+|   |                   |   \---service
+|   |                   |           AlumnoService.java
+|   |                   |
+|   |                   +---domain
+|   |                   |   +---event
+|   |                   |   |       AlumnoCreado.java
+|   |                   |   |
+|   |                   |   +---exception
+|   |                   |   |       DomainEmailInvalidException.java
+|   |                   |   |       DomainEmailNotBlankException.java
+|   |                   |   |       DomainStudentDateBirhdayInvalidException.java
+|   |                   |   |       DomainStudentDateBirthdayNotBlankException.java
+|   |                   |   |       DomainStudentDateBirthdayNotFutureException.java
+|   |                   |   |       DomainStudentIdNotBlankException.java
+|   |                   |   |       DomainStudentNameInvalidException.java
+|   |                   |   |       DomainStudentNameNotBlankException.java
+|   |                   |   |       DomainStudentSurnameInvalidException.java
+|   |                   |   |       DomainStudentSurnameNotBlankException.java
+|   |                   |   |
+|   |                   |   +---model
+|   |                   |   |       Alumno.java
+|   |                   |   |
+|   |                   |   +---port
+|   |                   |   |   +---in
+|   |                   |   |   |       AlumnoServicePort.java
+|   |                   |   |   |
+|   |                   |   |   \---out
+|   |                   |   |           AlumnoPersistencePort.java
+|   |                   |   |
+|   |                   |   \---valueobject
+|   |                   |           AlumnoId.java
+|   |                   |           Email.java
+|   |                   |
+|   |                   \---infrastructure
+|   |                       +---adapter
+|   |                       |   +---in
+|   |                       |   |   \---rest
+|   |                       |   |       |   AlumnoRestController.java
+|   |                       |   |       |
+|   |                       |   |       +---advice
+|   |                       |   |       |       GlobalControllerAdvice.java
+|   |                       |   |       |
+|   |                       |   |       +---dto
+|   |                       |   |       |       AlumnoDTORequest.java
+|   |                       |   |       |       AlumnoDTOResponse.java
+|   |                       |   |       |       ErrorCatalog.java
+|   |                       |   |       |       ErrorResponse.java
+|   |                       |   |       |
+|   |                       |   |       \---mapper
+|   |                       |   |               AlumnoRestMapper.java
+|   |                       |   |
+|   |                       |   \---out
+|   |                       |       \---persistence
+|   |                       |           |   AlumnoPersistenceAdapter.java
+|   |                       |           |
+|   |                       |           +---entity
+|   |                       |           |       AlumnoEntity.java
+|   |                       |           |
+|   |                       |           +---mapper
+|   |                       |           |       AlumnoMapper.java
+|   |                       |           |
+|   |                       |           +---repository
+|   |                       |           |       AlumnoJpaRepository.java
+|   |                       |           |
+|   |                       |           \---seeder
+|   |                       |                   AlumnoSeeder.java
+|   |                       |
+|   |                       +---config
+|   |                       |       AppConfig.java
+|   |                       |
+|   |                       \---exception
+|   \---resources
+|       |   application.yml
+|       |
+|       +---static
+|       \---templates
+\---test
+    \---java
+        \---com
+            \---hector
+                \---forge
+                    \---msapirestalumnos
+                            MsApirestAlumnosApplicationTests.java
+```
