@@ -31,6 +31,7 @@ Puedes importar la colección de Postman para probar los endpoints:
 [Descargar colección aquí](postman/Crud-Alumnos.postman_collection.json)
 
 ## 🏠 Estructura del proyecto 
+
 ```plaintext
 +---main
 |   +---java
