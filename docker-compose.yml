@@ -1,0 +1,35 @@
+services:
+  app:
+    build: .
+    container_name: student_api_hex
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:mysql://db:3306/${MYSQL_DATABASE}?useSSL=false&serverTimezone=UTC&allowPublicKeyRetrieval=true
+      SPRING_DATASOURCE_USERNAME: ${SPRING_DATASOURCE_USERNAME}
+      SPRING_DATASOURCE_PASSWORD: ${SPRING_DATASOURCE_PASSWORD}
+    depends_on:
+      - db
+    restart: always
+    networks:
+      - web_network
+
+  db:
+    image: mysql:8.0
+    container_name: db_student_hex
+    environment:
+      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
+      MYSQL_DATABASE: ${MYSQL_DATABASE}
+      MYSQL_USER: ${MYSQL_USER}
+      MYSQL_PASSWORD: ${MYSQL_PASSWORD}
+    volumes:
+      - mysql-data:/var/lib/mysql
+    restart: always
+    networks:
+      - web_network
+
+volumes:
+  mysql-data:
+
+networks:
+  web_network:
+    external: true
+    name: ${NETWORK_NAME}

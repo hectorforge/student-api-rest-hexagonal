@@ -31,7 +31,7 @@ public class AlumnoSeeder {
                     AlumnoEntity.builder().id("10").nombre("Laura").apellido("Morales").email("laura.morales@example.com").fechaNacimiento(LocalDate.of(2002, 2, 28)).activo(true).build()
             );
 
-            alumnoRepository.saveAll(alumnos);
+            //alumnoRepository.saveAll(alumnos);
         }
     }
 }
